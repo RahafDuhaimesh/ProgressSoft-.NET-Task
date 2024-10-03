@@ -1,0 +1,6 @@
+# @ProgressSoft_RahafDuhaimesh.Server_HostAddress = http://localhost:5069
+
+# GET {{ProgressSoft_RahafDuhaimesh.Server_HostAddress}}/weatherforecast/
+# Accept: application/json
+
+###

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressSoft-RahafDuhaimesh.Server", "ProgressSoft-RahafDuhaimesh.Server\ProgressSoft-RahafDuhaimesh.Server.csproj", "{BF4EC76E-C519-40CB-972B-C6690EB30A48}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "progresssoft-rahafduhaimesh.client", "progresssoft-rahafduhaimesh.client\progresssoft-rahafduhaimesh.client.esproj", "{766E3312-5328-4678-9BFE-476C35E702EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF4EC76E-C519-40CB-972B-C6690EB30A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4EC76E-C519-40CB-972B-C6690EB30A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4EC76E-C519-40CB-972B-C6690EB30A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4EC76E-C519-40CB-972B-C6690EB30A48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766E3312-5328-4678-9BFE-476C35E702EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766E3312-5328-4678-9BFE-476C35E702EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766E3312-5328-4678-9BFE-476C35E702EB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{766E3312-5328-4678-9BFE-476C35E702EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766E3312-5328-4678-9BFE-476C35E702EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766E3312-5328-4678-9BFE-476C35E702EB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C3A5B48F-E4B7-4AC9-932F-FCFCCF474825}
+	EndGlobalSection
+EndGlobal

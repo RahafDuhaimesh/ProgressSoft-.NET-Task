@@ -1,0 +1,49 @@
+
+
+<div class="bg-image h-100" style="background-image: url('https://cdn.wallpapersafari.com/69/42/RBWcdl.gif'); background-size: cover; background-position: center;">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
+    <!-- Added mask --><br />
+ 
+
+<app-filter (filterResults)="updateFilteredCards($event)"></app-filter>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let item of filteredCards">
+          <div class="card d-flex flex-row" style="border-radius: 1rem; background-color: white;">
+
+            <!-- Image Container -->
+            <div class="image-container" style="flex: 0 0 40%; max-width: 40%; border-top-left-radius: 1rem; border-bottom-left-radius: 1rem; overflow: hidden; display: flex; align-items: center;">
+              <!-- Center image vertically -->
+              <img *ngIf="item.photo" [src]="'data:image/png;base64,' + item.photo" class="card-img-top" alt="{{item.name}}" style="width: 100%; height: auto; max-height: 100%; object-fit: cover;"> <!-- Set height to match card -->
+            </div>
+
+            <!-- Card Body -->
+            <div class="card-body" style="flex: 1; padding: 20px; font-family: 'Times New Roman', Times, serif;">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">Gender: {{item.gender}}</p>
+              <p class="card-text">Date Of Birth: {{item.dateOfBirth}}</p>
+              <p class="card-text">Email: {{item.email}}</p>
+              <p class="card-text">Phone: {{item.phone}}</p>
+              <p class="card-text">Address: {{item.address}}</p>
+
+              <!-- Action Buttons -->
+              <div class="d-flex justify-content-around mt-3">
+                <!-- Changed to justify-content-around for better spacing -->
+                <button (click)="downloadQRCode(item.id)" class="btn btn-primary btn-sm">
+                  <i class="fas fa-qrcode"></i> <!-- QR Code Icon -->
+                </button>
+                <button (click)="downloadExcel(item.id)" class="btn btn-primary btn-sm">
+                  <i class="fas fa-file-excel"></i> <!-- Excel Icon -->
+                </button>
+                <button (click)="deleteCardByID(item.id)" class="btn btn-danger btn-sm">
+                  <i class="fas fa-trash-alt"></i> <!-- Delete Icon -->
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

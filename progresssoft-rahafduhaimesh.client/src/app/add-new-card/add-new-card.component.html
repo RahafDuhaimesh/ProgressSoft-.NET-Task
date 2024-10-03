@@ -1,0 +1,114 @@
+<section class="intro">
+  <div class="bg-image h-100" style="background-image: url('https://cdn.wallpapersafari.com/69/42/RBWcdl.gif'); background-size: cover; background-position: center;">
+    <div class="mask d-flex align-items-center h-100" style="background-color: rgba(243, 242, 242, 0.8);">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-lg-5">
+            <div class="card" style="border-radius: 1rem; background-color: transparent;">
+              <div class="card-body py-5 px-4 p-md-5">
+                <form #addNewPersonForm="ngForm" (ngSubmit)="addNewPerson(addNewPersonForm.value)" style="padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: rgba(249, 249, 249, 0.9); font-family: 'Times New Roman', serif;">
+                  <h2 style="text-align: center; margin-bottom: 20px;">Add New User</h2>
+
+                  <div class="row">
+                    <!-- Person Name -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required ngModel>
+                      </div>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" class="form-control" required ngModel>
+                          <option value="" disabled selected>Select Gender</option>
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <!-- Date of Birth -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required ngModel>
+                      </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required ngModel>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <!-- Phone -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" required ngModel>
+                      </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" class="form-control" required ngModel>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <!-- Main Image -->
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="photo">Main Image</label>
+                        <input type="file" id="photo" name="photo" class="form-control" (change)="onFileChange($event)">
+                      </div>
+                    </div>
+
+                    <!-- Image Preview -->
+                    <div class="col-md-6" *ngIf="previewImage">
+                      <div class="form-group">
+                        <label>Image Preview:</label>
+                        <img [src]="previewImage" alt="Image Preview" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;">
+                      </div>
+                    </div>
+                  </div><br />
+
+                  <!-- Submit Button -->
+                  <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 text-center" style="margin-top: 20px;">
+            <hr style="border: 1px solid #ccc; margin: 20px 0;">
+            <span style="position: relative; top: -12px; background-color: rgba(243, 242, 242, 0.8); padding: 0 10px; font-family: 'Times New Roman', serif;">OR</span>
+            <hr style="border: 1px solid #ccc; margin: 20px 0;">
+          </div>
+
+          <div class="col-12 col-lg-5" style="margin-top: 20px;">
+            <div class="card" style="border-radius: 1rem; background-color: transparent;">
+              <div class="card-body">
+                <app-upload-csv></app-upload-csv>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+.container {
+  margin: 20px auto;
+}
+
+.card {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-color: #fff;
+}
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+.image-container {
+  height: 200px; /* تعيين ارتفاع ثابت للحاوية */
+  width: 100%; /* تعيين عرض الحاوية */
+  display: flex; /* استخدام Flexbox لمركزة الصورة */
+  justify-content: center; /* مركز الصورة أفقيًا */
+  align-items: center; /* مركز الصورة عموديًا */
+  overflow: hidden; /* إخفاء الأجزاء الزائدة من الصورة */
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%; /* تعيين ارتفاع أقصى للحفاظ على الأبعاد الأصلية */
+  object-fit: contain; /* تضمن أن الصورة كاملة تظهر داخل الحاوية */
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-text {
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 15px;
+  }
+}
